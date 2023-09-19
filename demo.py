@@ -20,6 +20,9 @@ rps.load_mask(filename=MASK_FILENAME)    # Load mask image
 rps.load_lightnpy(filename=LIGHT_FILENAME)    # Load light matrix
 rps.load_npyimages(foldername=DATA_FOLDERNAME)    # Load observations
 start = time.time()
+print(rps.M.shape)
+print(rps.L.shape)
+
 rps.solve()    # Compute
 elapsed_time = time.time() - start
 print("Photometric stereo: elapsed_time:{0}".format(elapsed_time) + "[sec]")
